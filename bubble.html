@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Bubbles</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to top right, #001f3f, #004080, #0074D9);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -120px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.6);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- floating bubbles -->
+  <div class="bubble" style="left: 15%; width: 40px; height: 40px; animation-duration: 10s;"></div>
+  <div class="bubble" style="left: 35%; width: 25px; height: 25px; animation-duration: 7s;"></div>
+  <div class="bubble" style="left: 55%; width: 60px; height: 60px; animation-duration: 14s;"></div>
+  <div class="bubble" style="left: 75%; width: 20px; height: 20px; animation-duration: 6s;"></div>
+  <div class="bubble" style="left: 85%; width: 50px; height: 50px; animation-duration: 11s;"></div>
+  <div class="bubble" style="left: 25%; width: 35px; height: 35px; animation-duration: 9s;"></div>
+  <div class="bubble" style="left: 65%; width: 45px; height: 45px; animation-duration: 12s;"></div>
+  <div class="bubble" style="left: 90%; width: 30px; height: 30px; animation-duration: 8s;"></div>
+
+</body>
+</html>
