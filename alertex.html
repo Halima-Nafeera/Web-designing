@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert Messages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .alert {
+      padding: 20px;
+      background-color: #f44336; /* Red for danger */
+      color: white;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Alert Messages</h2>
+  <p>Click on the <span style="color:red; font-weight:bold;">×</span> symbol to close the alert message.</p>
+
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+  </div>
+</body>
+</html>
