@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Gradient & Polaroid</title>
+  <style>
+    body {
+      background-color: #fef6e4; /* pastel cream */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      text-shadow: 2px 2px #f582ae; /* pastel pink */
+    }  
+
+    #grad1 {
+      padding: 20px;
+      background-image: linear-gradient(
+        to right,
+        rgba(174, 226, 230, 0.9), /* pastel mint */
+        rgba(250, 200, 209, 0.9)  /* pastel pink */
+      );
+      border-radius: 10px;
+      margin: 20px;
+      color: #333;
+    }
+
+    #mydiv {
+      width: 250px;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 
+        0 4px 8px 0 rgba(248, 180, 217, 0.4), /* pastel pink shadow */
+        0 6px 20px 0 rgba(174, 226, 230, 0.4); /* pastel mint shadow */
+      text-align: center;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    #mydiv img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      padding: 10px;
+      background-color: #fde2e4; /* pastel pink background */
+    }
+
+    .container p {
+      color: #6d597a; /* pastel purple text */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="grad1">
+    <h1>Linear Gradient - Transparency</h1>
+    <p>
+      To add transparency, we use the rgba() function to define the color stops. 
+      The last parameter in rgba() can be a value from 0 to 1. 
+      0 = full transparency, 1 = full color (no transparency).
+    </p>
+  </div>
+
+  <h1>Create Polaroid Images</h1>
+  <p>The box-shadow property can be used to create pastel polaroid-style images:</p>
+
+  <div id="mydiv">
+    <!-- Safe placeholder image (no copyright issue) -->
+    <img src="https://uploads.onecompiler.io/43wjzj2gb/43ww78zek/1000438032.jpg" alt="Sample Pastel Image">
+    <div class="container">
+      <p>Hardanger, Norway</p>
+    </div>
+  </div>
+</body>
+</html>
