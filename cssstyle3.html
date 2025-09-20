@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastel Card Button Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      padding: 40px;
+      margin: 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card-button {
+      padding: 40px 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #333; /* softer text for pastel */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Pastel colors for each card */
+    .card-button:nth-child(1) { background: #ffd6e0; } /* pastel pink */
+    .card-button:nth-child(2) { background: #d4f1f4; } /* pastel aqua */
+    .card-button:nth-child(3) { background: #fff3b0; } /* pastel yellow */
+    .card-button:nth-child(4) { background: #cdb4db; } /* pastel purple */
+    .card-button:nth-child(5) { background: #b5ead7; } /* pastel green */
+    .card-button:nth-child(6) { background: #f7d6bf; } /* pastel peach */
+
+    /* Hover effect */
+    .card-button:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      opacity: 0.95;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-grid">
+    <button class="card-button">Card 1</button>
+    <button class="card-button">Card 2</button>
+    <button class="card-button">Card 3</button>
+    <button class="card-button">Card 4</button>
+    <button class="card-button">Card 5</button>
+    <button class="card-button">Card 6</button>
+  </div>
+
+</body>
+</html>

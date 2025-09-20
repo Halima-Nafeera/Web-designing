@@ -1,0 +1,103 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Css style box</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      margin: 0;  
+      padding: 20px;  
+      background-color: #fdf6f0; /* pastel cream */  
+    }  
+
+    h1 {  
+      text-align: center;  
+      color: #a78bfa; /* pastel lavender */  
+      font-weight: bold;  
+      text-decoration: underline;  
+    }  
+
+    .styled-box {  
+      border: 2px solid #cdb4db;  
+      padding: 20px;  
+      width: 250px;  
+      margin: 20px;  
+      background-color: #ffe5ec; /* pastel pink */  
+    }  
+
+    .button-bar {  
+      display: flex;  
+      justify-content: space-around;  
+      background-color: #cce5ff; /* pastel blue */  
+      padding: 10px;  
+      margin: 20px 0;  
+    }  
+
+    .button-bar button {  
+      background-color: #b5ead7; /* pastel green */  
+      border: none;  
+      padding: 10px 20px;  
+      font-weight: bold;  
+      cursor: pointer;  
+      border-radius: 5px;  
+      color: #333;  
+    }  
+
+    .moving-box {  
+      width: 100px;  
+      height: 100px;  
+      background-color: #ffdac1; /* pastel peach */  
+      position: relative;  
+      animation: slide 3s infinite alternate ease-in-out;  
+      border-radius: 10px;  
+      margin-top: 40px;  
+    }  
+
+    /* Animation keyframes */  
+    @keyframes slide {  
+      0%   { left: 100px; }  
+      100% { left: 1000px; }  
+    }  
+
+    .hover-button {  
+      background-color: #c7ceea; /* pastel purple-blue */  
+      color: #fff;  
+      padding: 12px 24px;  
+      border: none;  
+      border-radius: 5px;  
+      cursor: pointer;  
+      transition: background 0.3s;  
+      text-align: center;  
+    }  
+
+    .hover-button:hover {  
+      background-color: #ffb3c6; /* deeper pastel pink */  
+    }  
+
+    .hover-box:hover {  
+      transform: scale(1.2) rotate(10deg);  
+    }  
+  </style>  
+</head>  
+<body>  
+  <h1>Welcome to style box!</h1>  
+
+  <div class="styled-box">  
+    This is a styled box.  
+  </div>  
+
+  <div class="button-bar">  
+    <button>Item 1</button>  
+    <button>Item 2</button>  
+    <button>Item 3</button>  
+  </div>  
+
+  <div class="moving-box"></div>  
+
+  <button class="hover-button">Hover Me!</button><br>  
+
+  <div class="hover-box"></div>  
+</body>  
+</html>

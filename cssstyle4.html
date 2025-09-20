@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Variables Demo</title>
+  <style>
+    :root {
+      --bg-color: #f0f8ff;       /* pastel AliceBlue */
+      --text-color: #333333;     /* dark gray text for readability */
+      --button-color: #ffb6b9;   /* pastel pink button */
+      --button-text: #ffffff;    /* white button text */
+      --padding: 20px;
+      --font-size: 20px;
+      --button-hover: #ff7f7f;   /* brighter pastel red for hover */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .message {
+      font-size: var(--font-size);
+    }
+
+    .btn {
+      background-color: var(--button-color);
+      color: var(--button-text);
+      padding: var(--padding);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--button-hover);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="message">This div uses CSS variables for styling!</div>
+    <button class="btn">Click Me</button>
+  </div>
+
+</body>
+</html>
