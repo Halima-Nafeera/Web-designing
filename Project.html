@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abaya Elegance</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #000000;
+      --accent-color: #c9a227; /* gold shade */
+      --light-bg: #f9f6f1;
+    }
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: var(--main-color) !important;
+    }
+    .navbar-brand, .nav-link, .nav-link.active {
+      color: white !important;
+    }
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+    .hero-section {
+      background: linear-gradient(to right, #000000d8, #000000d8), url('https://images.unsplash.com/photo-1589654314834-8b1a4d0e39d7') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+    .btn-gold {
+      background-color: var(--accent-color);
+      color: black;
+      border: none;
+    }
+    .btn-gold:hover {
+      background-color: black;
+      color: var(--accent-color);
+    }
+    .product-card {
+      transition: transform 0.3s ease;
+      border: none;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+    .product-img {
+      height: 400px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: var(--main-color);
+      color: white;
+    }
+    .counter-badge {
+      background-color: var(--accent-color);
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Abaya Elegance</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-3">
+          <a class="nav-link position-relative" href="#">
+            🛒 Cart <span id="cartCount" class="badge rounded-pill counter-badge">0</span>
+          </a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link position-relative" href="#">
+            ♡ Wishlist <span id="wishlistCount" class="badge rounded-pill counter-badge">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section text-center">
+  <div class="container">
+    <h1>Elegant Abayas for Every Woman</h1>
+    <p class="lead">Luxury • Style • Modesty</p>
+    <a href="#shop" class="btn btn-gold btn-lg mt-3">Shop Now</a>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Our Collection</h2>
+    <div class="row g-4">
+
+      <!-- PRODUCT 1 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card">
+          <img src="https://uploads.onecompiler.io/43wjzj2gb/43z8sx37g/1000465996.jpg" class="card-img-top product-img" alt="abaya1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Classic Black Abaya</h5>
+            <p class="card-text">$49.99</p>
+            <button onclick="addToCart()" class="btn btn-gold btn-sm me-2">Add to Cart</button>
+            <button onclick="addToWishlist()" class="btn btn-outline-dark btn-sm">♡ Wishlist</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card">
+          <img src="https://uploads.onecompiler.io/43wjzj2gb/43z8sx37g/1000465999.jpg" class="card-img-top product-img" alt="abaya2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Elegant Brown Abaya</h5>
+            <p class="card-text">$59.99</p>
+            <button onclick="addToCart()" class="btn btn-gold btn-sm me-2">Add to Cart</button>
+            <button onclick="addToWishlist()" class="btn btn-outline-dark btn-sm">♡ Wishlist</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 3 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card">
+          <img src="https://uploads.onecompiler.io/43wjzj2gb/43z8sx37g/1000465997.jpg" class="card-img-top product-img" alt="abaya3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Modern Beige Abaya</h5>
+            <p class="card-text">$54.99</p>
+            <button onclick="addToCart()" class="btn btn-gold btn-sm me-2">Add to Cart</button>
+            <button onclick="addToWishlist()" class="btn btn-outline-dark btn-sm">♡ Wishlist</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT 4 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card product-card">
+          <img src="https://uploads.onecompiler.io/43wjzj2gb/43z8sx37g/1000465998.jpg" class="card-img-top product-img" alt="abaya4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Premium Black Abaya</h5>
+            <p class="card-text">$69.99</p>
+            <button onclick="addToCart()" class="btn btn-gold btn-sm me-2">Add to Cart</button>
+            <button onclick="addToWishlist()" class="btn btn-outline-dark btn-sm">♡ Wishlist</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">About Us</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p>
+          At <strong>Abaya Elegance</strong>, we believe modesty and style go hand in hand. 
+          Our mission is to provide beautiful, high-quality abayas that reflect your elegance.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>
+          Each piece is crafted with care, blending tradition with modern fashion to make you feel confident and graceful.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-3">
+  <p class="mb-0">© 2025 Abaya Elegance | Designed with 🖤</p>
+</footer>
+
+<script>
+  let cartCount = 0;
+  let wishlistCount = 0;
+
+  function addToCart() {
+    cartCount++;
+    document.getElementById("cartCount").textContent = cartCount;
+  }
+
+  function addToWishlist() {
+    wishlistCount++;
+    document.getElementById("wishlistCount").textContent = wishlistCount;
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
